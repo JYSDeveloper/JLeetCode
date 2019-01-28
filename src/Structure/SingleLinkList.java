@@ -23,4 +23,5 @@ public class SingleLinkList<T> {
     public void setNext(SingleLinkList next) {
         this.next = next;
     }
+
 }

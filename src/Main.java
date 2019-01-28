@@ -1,4 +1,5 @@
 import LinkList.CircleSingleLinkList;
+import LinkList.ReverseSingleLinkList;
 import Structure.SingleLinkList;
 
 public class Main {
@@ -18,11 +19,17 @@ public class Main {
         v4.setNext(v5);
         v5.setNext(v6);
         v6.setNext(v7);
-        v7.setNext(v6);
+        //v7.setNext(v6);
 
-        boolean result = CircleSingleLinkList.hasCircle(v1);
-        int length = CircleSingleLinkList.CircleLength(v1);
-        System.out.println(result);
-        System.out.println("length is " + length);
+//        boolean result = CircleSingleLinkList.hasCircle(v1);
+//        int length = CircleSingleLinkList.CircleLength(v1);
+//        System.out.println(result);
+//        System.out.println("length is " + length);
+
+        SingleLinkList reversedValue = ReverseSingleLinkList.Reverse(v1);
+        while (reversedValue.getNext() != null){
+            System.out.println(" " + reversedValue.getValue());
+            v1 = v1.getNext();
+        }
     }
 }
